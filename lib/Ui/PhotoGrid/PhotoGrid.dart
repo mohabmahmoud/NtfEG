@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:skeletons/skeletons.dart';
 
 import '../../constant.dart';
 import 'SinglePhotoView.dart';
@@ -43,14 +44,26 @@ class _PhotoGridState extends State<PhotoGrid> {
                     InkWell(child:
 
                       Padding(padding: EdgeInsets.all(4),child:
+                          Container(
+                          decoration: BoxDecoration(color: Colors.grey.withOpacity(.4),borderRadius: BorderRadius.circular(5))
+                          ,child:
 
 
                        Hero(tag: Snap.data!.docs[index].get("Image"),child: CachedNetworkImage(
                         imageUrl:
                         Snap.data!.docs[index].get("Image"),
-                    placeholder: (context, url) => CircularProgressIndicator(),
+                    placeholder: (context, url) => SizedBox(
+
+                        child:
+
+                        SkeletonLine(
+                          style: SkeletonLineStyle(height: 150,
+
+                              borderRadius: BorderRadius.circular(8)),
+                        )
+                    ),
                     errorWidget: (context, url, error) => Icon(Icons.error),
-                    )
+                    ),)
 
 
                     )),onTap: (){

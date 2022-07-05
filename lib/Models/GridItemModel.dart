@@ -79,11 +79,11 @@ import '../Helpers/Helper.dart';
 
   };
   GridItemModel.fromjson(var json){
-    print(json);
+    print(json.get("NameAr"));
 
-    Name=(Helper.IsArabic)?json.get("NameAr"):json.get("NameEn");
+    Name=json.get("NameAr");
     NameAr=json.get("NameAr");
-    NameEn=json.get("NameEn");
+    NameEn=json.get("NameAr");
     Type=json.get("Type");
     Link=json.get("Link");
     BackGroundIconColor=json.get("BackGroundIconColor");

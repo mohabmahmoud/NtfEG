@@ -2,11 +2,9 @@ import 'dart:convert';
 import 'dart:ui' as ui;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import '../styles/widthandheight.dart';
 
  class Helper{
-   static SharedPreferences ?sharedPreferences;
    static var Dic;
    static double sW=0;
    static double sH=0;
@@ -38,14 +36,7 @@ import '../styles/widthandheight.dart';
 
    }
    static bool GetCurrentLangage(){
-     if(sharedPreferences!.getBool('Lang')!=null){
-       IsArabic=sharedPreferences!.getBool('Lang')!;
-       return  IsArabic;
-     }else{
-
-       IsArabic=(ui.window.locale.languageCode=='ar')?true:false;
-       return IsArabic;
-     }
+     return true;
 
    }
    static  GetCurrentTextDirection(){

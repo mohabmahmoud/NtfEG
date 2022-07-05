@@ -54,11 +54,9 @@ class _ProgrammesState extends State<Programmes> {
     children: List.generate(tableContentList.length, (index) {
     return GestureDetector(
     onTap: () {
+      print(Snap.data!.docs[0].data());
+      print(Snap.data!.docs.length);
 
-      Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => PdfViewer(Snap.data!.docs[0].get(tableenContentList[index]))),
-    );
 
     },
     child: Column(

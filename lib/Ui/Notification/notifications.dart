@@ -47,23 +47,23 @@ class _NotificationsState extends State<Notifications> {
                       }
 
 
-                    },child:Card(color: Colors.white.withOpacity(.8),elevation:4,child:
+                    },child:Card(color: Colors.grey.withOpacity(.3),elevation:4,child:
 
 
                     Padding(padding: EdgeInsets.all(8),child:
                     Container(width:getwidth(context),child:
 
-                    ListTile(leading: Icon(Icons.notifications),title: Text(Snap.data!.docs[index].get("Title")
+                    ListTile(trailing: Icon(Icons.notifications,size: 35,color: Colors.red),title: Text(Snap.data!.docs[index].get("Title")
 
 
 
-                      ,textAlign: TextAlign.right,style:TextStyle(fontSize: 16,fontWeight: FontWeight.w600),),
+                      ,textAlign: TextAlign.right,style:TextStyle(color: Colors.white,fontSize: 16,fontWeight: FontWeight.w600),),
                     subtitle:
                     Text(Snap.data!.docs[index].get("Text")
 
 
 
-                      ,textAlign: TextAlign.right,style:TextStyle(fontSize: 14,fontWeight: FontWeight.w500),))
+                      ,textAlign: TextAlign.right,style:TextStyle(color: Colors.white,fontSize: 14,fontWeight: FontWeight.w500),))
 
 
                     )

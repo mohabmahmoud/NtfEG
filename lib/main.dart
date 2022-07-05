@@ -2,25 +2,26 @@ import 'dart:async';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:skeletons/skeletons.dart';
 import 'Helpers/Helper.dart';
 import 'Ui/Home/Home.dart';
 import 'Ui/Notification/notifications.dart';
 import 'homepage.dart';
-import 'styles/widthandheight.dart';
+import 'styles/apptheme.dart';
 import 'package:flutter/services.dart';
 
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  Helper.sharedPreferences =await SharedPreferences.getInstance();
   print(Helper.GetCurrentTextDirection());
-
 
   runApp(
      MyApp()
   );
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent
+  ));
 }
 
 
@@ -32,12 +33,46 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
 
       title: 'Main',
-      home: MyHomePage(),
+      home:
+
+         SkeletonTheme(
+        // themeMode: ThemeMode.light,
+        shimmerGradient: LinearGradient(
+        colors: [
+          Colors.red.withOpacity(.6),
+          Colors.grey.withOpacity(.5),
+    ],
+    stops: [
+    0.1,
+    0.5,
+    0.9,
+    ],
+    ),
+    darkShimmerGradient: LinearGradient(
+    colors: [
+      Colors.red.withOpacity(.6),
+      Colors.grey.withOpacity(.5),
+    ],
+    stops: [
+    0.0,
+    0.2,
+    0.5,
+    0.8,
+    1,
+    ],
+    begin: Alignment(-2.4, -0.2),
+    end: Alignment(2.4, 0.2),
+    tileMode: TileMode.clamp,
+    ),
+    child:
+      MyHomePage()),
+      theme: appTheme.apptheme,
       debugShowCheckedModeBanner: false,
       navigatorKey: Helper.materialKey,
     );
   }
 }
+
 
 class MyHomePage extends StatefulWidget {
   @override

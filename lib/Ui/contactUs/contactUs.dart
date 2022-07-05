@@ -12,7 +12,7 @@ class ContactUs extends StatefulWidget {
 
 const _urlWebSite = 'https://www.ntfeg.org/';
 const _youtube = 'https://youtube.com/channel/UCD429linqG8FD_ppnLiXXKQ';
-const _facebook = 'fb://facewebmodal/f?href=https://www.facebook.com/ntfeg';
+const _facebook = 'https://www.facebook.com/ntfeg';
 const _instgram = 'https://www.instagram.com/ntfegypt/';
 const _mobilephone = 'tel:+201156333192';
 const _mail =
@@ -30,7 +30,7 @@ class _ContactUsState extends State<ContactUs> {
         backgroundColor: Colors.transparent,
         body: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(30.0, 10.0, 30.0, 10.0),
+            padding: const EdgeInsets.fromLTRB(25.0, 10.0, 25.0, 10.0),
             child: Column(
               children: <Widget>[
                 SizedBox(
@@ -44,8 +44,8 @@ class _ContactUsState extends State<ContactUs> {
                 SizedBox(
                   height: 10,
                 ),
-                customTxt("المسرح القومى بالعتبة مكتب مركز المعلومات يومياً من الساعة العاشرة صباحاً حتى الرابعة عصراً ماعدا الجمعة إجازة ",
-                    Colors.white),
+                customTxt("المسرح القومى بالعتبة مكتب مركز المعلومات \nيومياً من الساعة العاشرة صباحاً حتى الرابعة عصراً ",
+                    Colors.white,),
                 SizedBox(
                   height: 30,
                 ),

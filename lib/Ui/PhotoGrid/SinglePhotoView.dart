@@ -47,7 +47,7 @@ class _SinglePhotoViewState extends State<SinglePhotoView> {
         }
 
 
-      ,child: Text("  Save  ",style: TextStyle(fontSize: 18,color: Colors.white)),)),body:
+      ,child: Text("   حفظ  ",style: TextStyle(fontSize: 18,color: Colors.white,fontWeight: FontWeight.bold)),)),body:
 
         Center(child:
             Container(decoration: BoxDecoration(border: Border.all(color: Colors.white,width: 2)),child:

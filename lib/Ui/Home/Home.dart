@@ -45,7 +45,7 @@ class _HomeState extends State<Home> {
         Column(children: [
 
           Container(height: 100,width: getwidth(context),
-              decoration: BoxDecoration(color:Colors.grey.withOpacity(.6) ,borderRadius: BorderRadius.all(Radius.circular(5))),
+              decoration: BoxDecoration(color:Colors.red.withOpacity(.6) ,borderRadius: BorderRadius.all(Radius.circular(5))),
 
               child:
               Padding(
@@ -67,7 +67,7 @@ class _HomeState extends State<Home> {
 
 
 
-          Container(height: getheight(context)-140-MediaQuery.of(context).padding.top,child:
+          Container(height: getheight(context)-100,child:
 
 
 
@@ -77,7 +77,7 @@ Directionality(child:
     if(snapshot.hasData) {
 
           return GridView.count(
-            crossAxisCount: 3,
+            crossAxisCount: 2,
             children: List.generate(snapshot.data!.docs.length, (index) {
               return MenuItemApp(GridItemModel.fromjson(snapshot.data!.docs[index]));
 

@@ -36,16 +36,12 @@ dependencies:
   cupertino_icons: ^1.0.2
   photo_view: ^0.13.0
   intl:
-  shared_preferences: ^2.0.15
-  flutter_colorpicker: ^1.0.3
   flutter_iconpicker: ^3.1.1
   font_awesome_flutter: ^10.1.0
   cloud_firestore: ^3.1.15
   firebase_core: ^1.15.0
   firebase_analytics: ^9.1.8
   firebase_messaging: ^11.4.0
-  firebase_storage: ^10.2.11
-  auto_size_text: ^3.0.0
   webview_flutter:
   carousel_slider: ^4.1.1
   syncfusion_flutter_pdfviewer: ^20.1.52-beta
@@ -53,6 +49,8 @@ dependencies:
   image_downloader: ^0.31.0
   android_intent: ^2.0.0
   url_launcher: 6.1.2
+  skeletons: ^0.0.3
+
 
 dev_dependencies:
   flutter_test:

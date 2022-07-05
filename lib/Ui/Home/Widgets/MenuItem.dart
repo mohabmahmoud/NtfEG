@@ -17,21 +17,27 @@ import '../../contactUs/contactUs.dart';
 
 Widget MenuItemApp(GridItemModel Item){
   return InkWell(child:
-  Padding(padding:EdgeInsets.all(5) ,child:Container(decoration: BoxDecoration(color:Colors.grey.withOpacity(.6) ,borderRadius: BorderRadius.all(Radius.circular(5))),child:Container(
+  Padding(padding:EdgeInsets.all(5) ,child:Container(decoration: BoxDecoration(
+      borderRadius: BorderRadius.all(Radius.circular(5)),
+    border: Border.all(width: 2,color: Colors.white)
+
+  ),child:Container(
 
       child: Container(child:Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(Item.IconDataa,size: 45,color: Colors.white),
+          Icon(Item.IconDataa,size: 55,color: Colors.white),
 
 
           SizedBox(
             height: 5,
           ),
           Center(child:
-          customTxt(
-             Item.getName(),
-              Colors.white)),
+          Text(
+             Item.getName(),style:TextStyle(color:
+              Colors.white,fontSize: 17,fontWeight: FontWeight.bold)
+
+          )),
         ],
       ),)
   ))),

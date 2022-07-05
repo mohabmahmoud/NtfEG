@@ -17,7 +17,7 @@ customAppBar(String title, BuildContext context, bool haveBackButton,{Widget ?te
     leading: haveBackButton
         ? Container()
         : IconButton(
-            icon: Icon(Icons.arrow_back, color: secondColor),
+            icon: Icon(Icons.arrow_back, color: Colors.black),
             onPressed: () => Navigator.of(context).pop(),
           ),
 
@@ -29,7 +29,7 @@ customAppBar(String title, BuildContext context, bool haveBackButton,{Widget ?te
     titleSpacing: 00.0,
     centerTitle: true,
     elevation: 0.00,
-    backgroundColor: Colors.transparent,
+    backgroundColor: Colors.red.withOpacity(.6),
 actions: [
   text!=null?
       Center(child:
