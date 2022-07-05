@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "749565480301",
+    "project_id": "ntfeg-c3e08",
+    "storage_bucket": "ntfeg-c3e08.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:749565480301:android:d8a73835e8a9375c575e64",
+        "android_client_info": {
+          "package_name": "com.example.ntfegadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "749565480301-4efrpd61l9kb8t6n38puso2b5oga17rt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDuopgulpgCB_q8lCiuoo-iMmO_FxWA94"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "749565480301-4efrpd61l9kb8t6n38puso2b5oga17rt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:749565480301:android:09addebc7d442989575e64",
+        "android_client_info": {
+          "package_name": "com.ntfeg.ntfeg.ntfeg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "749565480301-4efrpd61l9kb8t6n38puso2b5oga17rt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDuopgulpgCB_q8lCiuoo-iMmO_FxWA94"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "749565480301-4efrpd61l9kb8t6n38puso2b5oga17rt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
