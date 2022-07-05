@@ -21,10 +21,6 @@ void main() async{
   runApp(
      MyApp()
   );
-  SystemChrome.setSystemUIOverlayStyle(
-    statusBarColor: Colors.transparent,
-
-  );
 }
 
 
