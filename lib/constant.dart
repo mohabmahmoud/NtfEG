@@ -114,12 +114,12 @@ customContactRow(String txt, IconData icon, String _launcherUrl,{bool ?No}) {
       alignment: Alignment.center,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
-          color:  Colors.red[800],
+          color:  Colors.red.withOpacity(.7),
 
       ),
       width: double.infinity,
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
+        padding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[

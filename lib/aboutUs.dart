@@ -46,7 +46,7 @@ class _AboutUsState extends State<AboutUs> {
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
-                    color:  Colors.red[800],
+                    color:   Colors.red.withOpacity(.7),
                   ),
                   width: double.infinity,
                   child: Padding(
@@ -55,11 +55,11 @@ class _AboutUsState extends State<AboutUs> {
                     InkWell(onTap:(){
 
 
-                      launchURL("fb://facewebmodal/f?href=https://www.facebook.com/mohamed.fadel.elkabany");
+                      launchURL("https://www.facebook.com/mohamed.fadel.elkabany");
 
                     },child:
                     customTxt(
-                        "مدير الموقع الالكتروني و السوشيال ميديا بالمهرجان"+"\n"+
+                        "مدير الموقع الالكتروني و السوشيال ميديا"+"\n"+
                         "محمد فاضل القبانى"
 
                         ,
@@ -73,7 +73,7 @@ class _AboutUsState extends State<AboutUs> {
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
-                    color:  Colors.red[800],
+                    color:  Colors.red.withOpacity(.7),
                   ),
                   width: double.infinity,
                   child: Padding(
@@ -81,7 +81,7 @@ class _AboutUsState extends State<AboutUs> {
                     child: InkWell(onTap:(){
 
 
-                      launchURL("fb://facewebmodal/f?href=https://www.facebook.com/trends4adv");
+                      launchURL("https://www.facebook.com/trends4adv");
 
                     },child:
                     customTxt(

@@ -49,7 +49,9 @@ class _PhotoGridState extends State<PhotoGrid> {
                           ,child:
 
 
-                       Hero(tag: Snap.data!.docs[index].get("Image"),child: CachedNetworkImage(
+                       Hero(tag: Snap.data!.docs[index].get("Image"),child:
+
+                       CachedNetworkImage(
                         imageUrl:
                         Snap.data!.docs[index].get("Image"),
                     placeholder: (context, url) => SizedBox(

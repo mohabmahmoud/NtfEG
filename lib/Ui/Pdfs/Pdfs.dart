@@ -1,5 +1,7 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:skeletons/skeletons.dart';
 import '../../Helpers/Helper.dart';
 import '../../Screens/PdfViewer.dart';
 import '../../constant.dart';
@@ -53,7 +55,26 @@ class _PdfsState extends State<Pdfs> {
                         }
                             ,child:
 
-                            Image.network(value.get("Image"))),
+
+
+                            CachedNetworkImage(
+                            imageUrl:
+                            value.get("Image"),
+                      placeholder: (context, url) => SizedBox(
+
+                          child:
+
+                          SkeletonLine(
+                            style: SkeletonLineStyle(height: 150,
+
+                                borderRadius: BorderRadius.circular(8)),
+                          )
+                      ),
+                      errorWidget: (context, url, error) => Icon(Icons.error),
+                    )
+
+
+                        ),
                       ),
 
                       Container(alignment: Alignment.topCenter,child:
