@@ -1,5 +1,6 @@
 import 'package:android_intent/android_intent.dart';
 import 'package:flutter/material.dart';
+import 'package:ntfeg/Ui/PhotoGrid/SinglePhotoView.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../../Helpers/Helper.dart';
 import '../../../Models/GridItemModel.dart';
@@ -123,6 +124,17 @@ print(Item.Type);
         Navigator.push(Helper.materialKey.currentContext!, MaterialPageRoute(builder: (context) {
           return ContactUs();
         },));
+
+      }
+
+      else if(Item.Type=="Pic"){
+
+        print(Item.Link);
+        Navigator.push(Helper.materialKey.currentContext!, MaterialPageRoute(builder: (context){
+          return SinglePhotoView(Item.Link);
+        }));
+
+
 
       }
 
