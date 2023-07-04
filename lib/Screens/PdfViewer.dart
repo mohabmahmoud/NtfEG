@@ -3,6 +3,7 @@ import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 import '../constant.dart';
 import '../styles/widthandheight.dart';
+import 'dart:typed_data';
 
 class PdfViewer extends StatefulWidget {
   String PdfPath;

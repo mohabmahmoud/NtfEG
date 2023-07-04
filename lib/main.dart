@@ -116,7 +116,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
     Timer(
-        Duration(seconds: 6),
+        Duration(seconds: 3),
         () async{
           Helper.HelperInit(context);
          // Helper.Dic=await Helper.getJson();
@@ -142,8 +142,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return new Scaffold(
         backgroundColor: Colors.white,
-        body: Center(child:Container(width: MediaQuery.of(context).size.width,
-            color: Colors.white, child: Image.asset("assets/Logo.gif",fit: BoxFit.fitWidth,))));
+        body: Center(child:Container(height: MediaQuery.of(context).size.height,width: MediaQuery.of(context).size.width,
+            color: Colors.white, child: Image.asset("assets/Logo.gif",fit: BoxFit.fitHeight,))));
 
 
   }

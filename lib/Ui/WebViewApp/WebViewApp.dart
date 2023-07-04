@@ -1,5 +1,3 @@
-import 'dart:io';
-import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
@@ -14,11 +12,33 @@ class WebViewExample extends StatefulWidget {
 }
 
 class WebViewExampleState extends State<WebViewExample> {
+
+  WebViewController controller = WebViewController()
+  ..setJavaScriptMode(JavaScriptMode.unrestricted)
+  ..setBackgroundColor(const Color(0x00000000))
+  ..setNavigationDelegate(
+  NavigationDelegate(
+  onProgress: (int progress) {
+  // Update loading bar.
+  },
+  onPageStarted: (String url) {},
+  onPageFinished: (String url) {},
+  onWebResourceError: (WebResourceError error) {},
+  onNavigationRequest: (NavigationRequest request) {
+  if (request.url.startsWith('https://www.youtube.com/')) {
+  return NavigationDecision.prevent;
+  }
+  return NavigationDecision.navigate;
+  },
+  ),
+  )
+  ;
+
   @override
   void initState() {
+    controller.loadRequest(Uri.parse(widget.Link));
     super.initState();
     // Enable virtual display.
-    if (Platform.isAndroid) WebView.platform = AndroidWebView();
   }
   bool isLoading=true;
 
@@ -26,26 +46,8 @@ class WebViewExampleState extends State<WebViewExample> {
   Widget build(BuildContext context) {
     print(widget.Link);
     return Scaffold( backgroundColor: Colors.transparent,appBar:customAppBar(widget.Name, context, false),body:
-    Stack(children: [
+    WebViewWidget(controller: controller),
 
-      WebView(
-        initialUrl: widget.Link,
-        onPageFinished: (finish) {
-          setState(() {
-            isLoading = false;
-          });
-        },
-
-        javascriptMode: JavascriptMode.unrestricted,
-        onWebViewCreated: (WebViewController webViewController) {
-
-        },),
-
-      (!isLoading)?Container():Center(child:
-      CircularProgressIndicator()),
-
-
-    ],)
    );
   }
 }

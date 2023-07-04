@@ -40,12 +40,7 @@ class _ContactUsState extends State<ContactUs> {
                 SizedBox(
                   height: 40,
                 ),
-                customTxt("مقر المهرجان", Colors.white),
-                SizedBox(
-                  height: 10,
-                ),
-                customTxt("المسرح القومى بالعتبة مكتب مركز المعلومات \nيومياً من الساعة العاشرة صباحاً حتى الرابعة عصراً ",
-                    Colors.white,),
+
                 SizedBox(
                   height: 30,
                 ),
